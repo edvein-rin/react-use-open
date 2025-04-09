@@ -6,9 +6,9 @@
 
 A simple [React hook](https://react.dev/reference/react/hooks) for managing open/closed states of components.
 
-:zap: **Completely typed**. Written in TypeScript. Type definitions included and verified with [`tsd`](https://github.com/SamVerschueren/tsd).
+:zap: **Fully typed**. Developed in TypeScript with type definitions included and validated using [`tsd`](https://github.com/SamVerschueren/tsd).
 
-:sparkles: **Backed by tests**. Full coverage of the API.
+:sparkles: **Test-driven**. Comprehensive test coverage of the API.
 
 ## Requirements
 
