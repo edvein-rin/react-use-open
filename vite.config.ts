@@ -4,13 +4,26 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 
-export default defineConfig(({ command }) => {
+export default defineConfig(({ command, mode }) => {
+  if (mode === "test") {
+    return {
+      plugins: [react()],
+      test: {
+        environment: "jsdom",
+        setupFiles: "./src/setupTests.ts",
+      },
+    };
+  }
+
   if (command === "serve") {
     return {
       plugins: [react()],
       root: path.resolve(__dirname, "dev"),
       build: {
         outDir: path.resolve(__dirname, "dist"),
+      },
+      test: {
+        environment: "jsdom",
       },
     };
   }
