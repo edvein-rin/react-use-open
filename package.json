@@ -1,6 +1,6 @@
 {
   "name": "react-use-open",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple React hook for managing open/closed states of components.",
   "author": "Eduard Tsakhlo <edveinrin@gmail.com> (https://github.com/edvein-rin)",
   "keywords": [
