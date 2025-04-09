@@ -30,13 +30,13 @@ export default defineConfig(({ command, mode }) => {
 
   if (command === "build") {
     return {
-      plugins: [react(), dts()],
+      plugins: [react(), dts({ rollupTypes: true })],
       build: {
         lib: {
           entry: path.resolve(__dirname, "src/index.ts"),
-          name: "useOpen",
+          name: "react-use-open",
           formats: ["es", "umd"],
-          fileName: (format) => `react-use-open.${format}.js`,
+          fileName: (format) => `index.${format}.js`,
         },
         rollupOptions: {
           external: ["react", "react-dom"],
